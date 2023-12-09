@@ -1,31 +1,62 @@
-/* App.css */
 .chessboard {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
-    width: 320px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 320px;
+}
+
+.chessboard-row {
+  display: flex;
+}
+
+.chess-piece {
+  width: 40px;
+  height: 40px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.main {
+  text-align: center;
+
+  &-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .chessboard-row {
-    display: flex;
+
+  &-buttons {
+    padding-top: 50px;
+
+    &-button {
+      width: 35px;
+      height: 35px;
+      background: none;
+      border: none;
+      font-size: 35px;
+      color: #3c3c3c;
+      margin: 0 15px;
+    }
   }
-  
-  .chess-piece {
-    width: 40px;
-    height: 40px;
-    background-color: #eee;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 896px) {
+  .main-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-//   /* Figura ranglari */
-//   .rook {
-//     /* ... rook stili */
-//   }
-  
-//   .knight {
-//     /* ... knight stili */
-//   }
-  
-//   /* Qolgan figura stili */
-  
+}
+
+@media only screen and (max-width: 584px) {
+  .main-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 352px) {
+  .main-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
